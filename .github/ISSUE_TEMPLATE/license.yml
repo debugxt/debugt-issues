@@ -1,0 +1,54 @@
+name: License or plan
+description: Activating, renewing or releasing a license, or what a plan allows.
+labels: ["license", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste your license key here.** This issue is public. The first few characters are enough for us to find it.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What it's about
+      options:
+        - Activating a license
+        - Renewing or refreshing a license
+        - Releasing a license / moving it to another machine
+        - What the Free or Pro plan allows
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what Settings → License said, and any error message shown.
+    validations:
+      required: true
+
+  - type: input
+    id: key-prefix
+    attributes:
+      label: First 6 characters of the license key
+      description: Only the first few. Leave empty if it's about the Free plan.
+
+  - type: input
+    id: debugt-version
+    attributes:
+      label: Debugt version
+      description: Extensions view → Debugt.
+      placeholder: "0.0.8"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - Other

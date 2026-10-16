@@ -1,0 +1,48 @@
+name: Feature request
+description: Something Debugt should do and doesn't.
+labels: ["feature", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What you're trying to do
+      description: The problem or workflow, not the solution. What gets in your way today?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would help
+      description: How you'd like Debugt to handle it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: What you do now
+      description: Any workaround you're using, and what it costs you.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Canvas
+        - Running services
+        - Request tracing
+        - Test Requests / Request History
+        - Settings / License
+        - Extension (commands, status bar, startup)
+        - Something new
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched the existing issues and this hasn't been asked for.
+          required: true

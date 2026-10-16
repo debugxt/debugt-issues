@@ -1,0 +1,122 @@
+name: Bug report
+description: Something doesn't work, or works differently from what you expected.
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. Please search the [existing issues](https://github.com/debugxt/debugt-issues/issues?q=is%3Aissue) first.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did you see, and what did you expect to see instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Starting from a fresh VS Code window if you can.
+      placeholder: |
+        1. Open a project with two services
+        2. Run both from the canvas
+        3. Send a request from Test Requests
+        4. ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Where in Debugt it happens, if you know.
+      options:
+        - Canvas
+        - Running services
+        - Request tracing
+        - Test Requests / Request History
+        - Settings / License
+        - Extension (commands, status bar, startup)
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: debugt-version
+    attributes:
+      label: Debugt version
+      description: Extensions view → Debugt.
+      placeholder: "0.0.8"
+    validations:
+      required: true
+
+  - type: input
+    id: vscode-version
+    attributes:
+      label: VS Code version
+      description: Help → About (Code → About Visual Studio Code on macOS).
+      placeholder: "1.105.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js version of the services
+      description: "`node --version` in the project."
+      placeholder: "22.11.0"
+
+  - type: dropdown
+    id: open-in
+    attributes:
+      label: Where the UI was open
+      options:
+        - App window
+        - Browser tab
+        - Not sure
+
+  - type: dropdown
+    id: plan
+    attributes:
+      label: Plan
+      options:
+        - Free
+        - Pro
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        The canvas console log for the day it happened, trimmed to the relevant lines: `~/.debugt/projects/<project>/console/<date>.jsonl`.
+        Errors from the UI's developer console help too. Remove anything private, and never paste a license key.
+      render: shell
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Screenshots, a small project that shows the problem, or how often it happens.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched the existing issues and this isn't one of them.
+          required: true

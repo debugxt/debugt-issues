@@ -1,0 +1,17 @@
+# name	color	description
+bug	d73a4a	Something isn't working
+feature	a2eeef	New feature or request
+license	fbca04	Licensing, activation or plans
+question	d876e3	A question rather than a bug or request
+needs-triage	ededed	Not looked at yet
+needs-repro	f9d0c4	Waiting on steps or a project that reproduces it
+needs-info	f9d0c4	Waiting on more information from the reporter
+confirmed	0e8a16	Reproduced; will be worked on
+fixed-next	5319e7	Fixed; ships in the next release
+duplicate	cfd3d7	Already reported
+wontfix	ffffff	Will not be worked on
+area:canvas	c5def5	Canvas
+area:services	c5def5	Running services
+area:tracing	c5def5	Request tracing
+area:requests	c5def5	Test Requests and Request History
+area:extension	c5def5	Commands, status bar, startup
